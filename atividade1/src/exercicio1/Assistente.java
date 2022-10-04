@@ -20,8 +20,8 @@ public class Assistente extends Funcionario{
 	@Override
 	void exibeDados() {
 		System.out.println("Nome do Assistente: " + super.getNome());
-		System.out.println("Número de Matrícula do Assistente: " + this.matricula);
-		System.out.println("Salário do Assistente: " + super.getSalario());
+		System.out.println("Numero de Matricula do Assistente: " + this.matricula);
+		System.out.println("Salario do Assistente: " + super.getSalario());
 		System.out.println("Ganho Anual: " + GanhoAnual());
 	}
 }
