@@ -28,12 +28,12 @@ public class AssistenteTecnico extends Assistente{
 
 		@Override
 		void exibeDados() {
-			System.out.println("Nome do Assistente Técnico: " + super.getNome());
-			System.out.println("Número de matrícula do Assistente Técnico: " + super.getMatricula());
-			System.out.println("Salário do Assistente Técnico: " + super.getSalario());
+			System.out.println("Nome do Assistente Tecnico: " + super.getNome());
+			System.out.println("Numero de matricula do Assistente Tecnico: " + super.getMatricula());
+			System.out.println("Salario do Assistente Tecnico: " + super.getSalario());
 			System.out.println("Bonus Salarial: " + getBonus());
-			System.out.println("Salário com Bônus: " + addBonus());
-			System.out.println("Ganho anual do Assistente Técnico: " + super.GanhoAnual());
+			System.out.println("Salario com Bonus: " + addBonus());
+			System.out.println("Ganho anual do Assistente Tecnico: " + super.GanhoAnual());
 		}
 
 }
