@@ -1,6 +1,6 @@
 package exercicio1;
 
-public class Funcionario {
+public abstract class Funcionario {
 
 	private String nome;
 	private double salario;
@@ -35,8 +35,8 @@ public class Funcionario {
 	}
 	
 	void exibeDados() {
-		System.out.println("Nome do funcionário: " + this.nome);
-		System.out.println("Salário do funcionário: " + this.salario);
+		System.out.println("Nome do funcionario: " + this.nome);
+		System.out.println("Salario do funcionario: " + this.salario);
 		System.out.println("Ganho Anual: " + GanhoAnual());
 	}
 }
