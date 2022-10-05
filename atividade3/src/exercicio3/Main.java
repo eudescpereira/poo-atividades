@@ -61,79 +61,79 @@ public class Main {
 						 
 						 do {
 
-						 menu2();
-						 opcaoMenu2 = input.nextInt();
-						 
-						 if(opcaoMenu2 == 1) {
-							
-							System.out.println("\nInformacoes sobre a Conta Especial: ");
-							System.out.println("Dono da Conta: " + ce.getDono());
-		 		        	System.out.println("Numero da Conta: " + ce.getNumConta());
-		 		        	System.out.println("Saldo: " + ce.getSaldo());
-							
-						 } else if(opcaoMenu2 == 2) {
-							
-							 if(ce.isStatus()) {
+							 menu2();
+							 opcaoMenu2 = input.nextInt();
+
+							 if(opcaoMenu2 == 1) {
+
+								System.out.println("\nInformacoes sobre a Conta Especial: ");
+								System.out.println("Dono da Conta: " + ce.getDono());
+							System.out.println("Numero da Conta: " + ce.getNumConta());
+							System.out.println("Saldo: " + ce.getSaldo());
+
+							 } else if(opcaoMenu2 == 2) {
+
+								 if(ce.isStatus()) {
 									System.out.print("\nInforme o Valor do Deposito: ");
 									deposito = input.nextDouble();
 									ce.depositar(deposito);
 									System.out.println("\nDeposito Realizado com sucesso!");
-								} else {
+								 } else {
 									System.out.println("\nAcao nao concluida.\nRazao: Voce precisa ter uma conta aberta.");
+								 }
+
+							 } else if(opcaoMenu2 == 3) {
+
+								 if (ce.isStatus() == true && saque < ce.getSaldo()) {
+								 	System.out.print("\nValor do Saque: ");
+									saque = input.nextDouble();
+									ce.sacar(saque);
+									System.out.println("\nSaque Realizado com sucesso!");
+
+								 } else if (ce.getSaldo() == 0){
+									System.out.println("\nAcao nao concluida.\nRazao: Nao ha nada para sacar!");
+
+								 } else if (saque > ce.getSaldo()){
+									System.out.println("\nAcao nao concluida. \nRazao: O saque nao pode ser maior que o seu saldo!");
+
+								 } else if (ce.isStatus() == false) {
+									System.out.println("\nAcao nao concluida.\nRazao: Voce precisa de uma conta aberta.");
 								}
-							
-						 } else if(opcaoMenu2 == 3) {
-							 
-							 if (ce.isStatus() == true && saque < ce.getSaldo()) {
-								 System.out.print("\nValor do Saque: ");
-								 saque = input.nextDouble();
-								 ce.sacar(saque);
-								 System.out.println("\nSaque Realizado com sucesso!");
-								 
-							 } else if (ce.getSaldo() == 0){
-								System.out.println("\nAcao nao concluida.\nRazao: Nao ha nada para sacar!");
-								
-							 } else if (saque > ce.getSaldo()){
-								System.out.println("\nAcao nao concluida. \nRazao: O saque nao pode ser maior que o seu saldo!");
-								
-							 } else if (ce.isStatus() == false) {
-								System.out.println("\nAcao nao concluida.\nRazao: Voce precisa de uma conta aberta.");
+
+							} else if(opcaoMenu2 == 4) {
+								ce.fecharConta();
+								System.out.println("\nConta Especial fechada com sucesso!");
+							}  else {
+								System.out.println("\nSistema fechado.");
 							}
-							 
-						} else if(opcaoMenu2 == 4) {
-							 ce.fecharConta();
-							 System.out.println("\nConta Especial fechada com sucesso!");
-						}  else {
-			                System.out.println("\nSistema fechado.");
-						}
 						 
 						 } while(opcaoMenu2 < 5);
 						 
 					 } else if(opcaoMenu1 == 3) {
 						 
-						System.out.println("\nInformacoes sobre a Conta: ");
-						System.out.println("Dono da Conta: " + cb.getDono());
+					System.out.println("\nInformacoes sobre a Conta: ");
+					System.out.println("Dono da Conta: " + cb.getDono());
 		 		        System.out.println("Numero da Conta: " + cb.getNumConta());
 		 		        System.out.println("Saldo: " + cb.getSaldo());
 	
 			        } else if(opcaoMenu1 == 4) {
 			        	
 			        	if(cb.isStatus()) {
-							System.out.print("\nInforme o Valor do Deposito: ");
-							deposito = input.nextDouble();
-							cb.depositar(deposito);
-							System.out.println("\nDeposito Realizado com sucesso!");
-						} else {
-							System.out.println("\nAcao nao concluida.\nRazao: Voce precisa ter uma conta aberta.");
-						}
+						System.out.print("\nInforme o Valor do Deposito: ");
+						deposito = input.nextDouble();
+						cb.depositar(deposito);
+						System.out.println("\nDeposito Realizado com sucesso!");
+					} else {
+						System.out.println("\nAcao nao concluida.\nRazao: Voce precisa ter uma conta aberta.");
+					}
 			        	
 			        } else if(opcaoMenu1 == 5) {
 			        	
 			        	 if (cb.isStatus() == true && saque < cb.getSaldo()) {
-							 System.out.print("\nValor do Saque: ");
-							 saque = input.nextDouble();
-							 cb.sacar(saque);
-							 System.out.println("\nSaque Realizado com sucesso!");
+						 System.out.print("\nValor do Saque: ");
+						 saque = input.nextDouble();
+						 cb.sacar(saque);
+						 System.out.println("\nSaque Realizado com sucesso!");
 							 
 						 } else if (cb.getSaldo() == 0){
 							System.out.println("\nAcao nao concluida.\nRazao: Nao ha nada para sacar!");
@@ -146,15 +146,15 @@ public class Main {
 						}
 			        	 
 			        } else if(opcaoMenu1 == 6) {
-			        	 cb.fecharConta();
-						 System.out.println("\nConta fechada com sucesso!");
+			        	cb.fecharConta();
+					System.out.println("\nConta fechada com sucesso!");
 			        	
 			        } else {
-			                System.out.println("\nSistema fechado.");
+					System.out.println("\nSistema fechado.");
 			          
 			        }
 				 
-				 } while(opcaoMenu1 < 7 && opcaoMenu2 < 5);
+			} while(opcaoMenu1 < 7 && opcaoMenu2 < 5);
 		}
-		
+	
 }
